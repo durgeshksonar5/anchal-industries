@@ -31,15 +31,22 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 ## 📁 Project Structure
 ```text
 anchal-industries/
-├── index.html          # Main landing page
-├── about/              # About us page & assets
-├── contact/            # Contact page with interactive map
-├── services/           # Services listing page
-├── service-single/      # Dedicated service detail page
-├── css/                # Main styling and vendor CSS
-├── js/                 # Custom logic and animation scripts
-├── images/             # All visual assets (SVG, JPG, PNG)
-└── webfonts/           # Font Awesome and local font files
+├── index.html              # Main landing page
+├── about.html              # About us page
+├── service.html            # Services listing page
+├── contact.html            # Contact page with interactive map
+├── service/
+│   └── service-single.html # Dedicated service detail page
+├── assets/                 # Custom project assets
+│   ├── css/                # Main custom styles
+│   ├── js/                 # Custom logic and animation scripts
+│   └── images/             # All visual assets (SVG, JPG, PNG)
+└── vendor/                 # Third-party libraries and plugins
+    ├── bootstrap/          # Bootstrap 5 core
+    ├── gsap/               # GSAP animations (ScrollTrigger, etc.)
+    ├── swiper/             # Slider components
+    ├── fontawesome/        # Icon system and webfonts
+    └── ...                 # Other plugins (WOW.js, Magnific Popup, etc.)
 ```
 
 ## ⚙️ Getting Started
