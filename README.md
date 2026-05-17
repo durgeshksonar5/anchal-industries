@@ -1,18 +1,17 @@
-# Anchal Industries - Movein (Movers & Packers)
+# Anchal Industries - Heavy Fabrication & Industrial Solutions
 
-Welcome to the **Anchal Industries** official website project. This is a high-end, responsive, and professionally designed web application for a Movers & Packers business, built using modern web technologies to ensure a seamless user experience.
+Welcome to the **Anchal Industries** official website project. This is a high-end, responsive, and professionally designed web application for a manufacturing, fabrication, and industrial solutions company, built using modern web technologies to ensure a seamless user experience.
 
 ## 🚀 Project Overview
-**Movein** is a comprehensive solution for relocation services. Whether it's residential moving, commercial relocation, or specialty item handling, the platform provides a user-friendly interface for customers to explore services, view past projects, and request instant quotes.
+**Anchal Industries** specializes in high-quality engineering, structural steel fabrication, heavy machinery manufacturing, and wholesale industrial/agricultural tools supply. Based in Wadner Bholji, Nandura, Maharashtra, the platform showcases industrial services, designer steel works, and connects clients directly via custom contact channels.
 
 ## ✨ Key Features
-- **Modern UI/UX**: Clean, professional design with a focus on usability and brand trust.
+- **Modern UI/UX**: Clean, professional design with a focus on durability, engineering precision, and corporate trust.
 - **GSAP Animations**: Fluid text and image reveal effects using GSAP (ScrollTrigger, SplitText).
 - **Responsive Navigation**: Fully optimized for all devices with a sticky header and mobile-friendly SlickNav menu.
-- **Dynamic Counters**: Real-time animation of business statistics (satisfaction rate, families helped).
-- **Service Portfolio**: Detailed showcase of residential, commercial, specialty, and eco-friendly moving services.
-- **Interactive Project Gallery**: A filterable or paginated view of latest work and successful relocations.
-- **Request a Quote**: A functional lead generation form with validation.
+- **Dynamic Counters**: Real-time animation of business statistics (tonnes of steel fabricated, successful projects).
+- **Service Portfolio**: Detailed showcase of heavy welding, custom fabrication, agricultural implements, and designer gates.
+- **Request a Quote**: A functional lead generation form with inline validation.
 - **Advanced Micro-interactions**: Custom magic cursor effects and smooth parallax scrolling.
 - **SEO Optimized**: Semantic HTML5 structure with optimized meta tags and heading hierarchy.
 
@@ -56,9 +55,9 @@ To run this project locally:
 3. For the best development experience, use a live server extension (like VS Code Live Server).
 
 ## 📞 Contact Information
-- **Phone**: +91 123 456 789
-- **Email**: info@domain.com / support@domainname.com
-- **Address**: 3891 Ranchview Dr. Richardson, California 62639
+- **Phone**: +91 99225 13143 / +91 99224 09378
+- **Email**: anil.ingle@anchalindustries.com / anchalindustries19@gmail.com
+- **Address**: Yashwant Nagar, Near Mohata School Ground, NH-6, Wadner Bholji, Taluka Nandura, District Buldhana, Maharashtra, India
 
 ---
 *Created with ❤️ for Anchal Industries.*
