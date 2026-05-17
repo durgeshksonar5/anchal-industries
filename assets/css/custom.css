@@ -48,11 +48,21 @@
 /************************************/
 
 :root {
-    --primary-color: #062E39;
-    --secondary-color: #F4F5F9;
-    --text-color: #565969;
-    --accent-color: #FD5523;
+    /* Brand Colors extracted from logo */
+    --primary-color: #264693;      /* Royal industrial brand blue */
+    --primary-dark: #1b326b;       /* Deeper contrast brand blue */
+    --primary-light: #e9eefb;      /* Clean brand blue tint */
+    
+    --secondary-color: #F4F5F9;    /* Lighter neutral gray background */
+    --secondary-dark: #344054;     /* Deep slate steel gray */
+    
+    --accent-color: #79ba3c;       /* Vibrant brand green */
+    --accent-hover: #639c2e;       /* Deeper contrast brand green */
+    
+    --text-color: #475467;         /* High readability charcoal text */
+    --text-light: #667085;         /* Lighter info text */
     --white-color: #FFFFFF;
+    
     --divider-color: #56596924;
     --dark-divider-color: #FFFFFF24;
     --error-color: rgb(230, 87, 87);
@@ -537,13 +547,30 @@ header.main-header .header-sticky.active {
 }
 
 .navbar {
-    padding: 25px 0;
+    padding: 15px 0;
     align-items: center;
 }
 
 .navbar-brand {
     padding: 0;
     margin: 0;
+    display: inline-block;
+}
+
+.navbar-brand img {
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .main-menu .nav-menu-wrapper {
@@ -779,7 +806,7 @@ header.main-header .header-sticky.active {
 
 .hero {
     position: relative;
-    background: url('../images/hero-bg.jpg') no-repeat;
+    background: url('/assets/hero-new.jpg') no-repeat;
     background-position: center center;
     background-size: cover;
     padding: 225px 0 120px;
@@ -1783,7 +1810,7 @@ header.main-header .header-sticky.active {
     text-align: center;
     border: 1px solid var(--divider-color);
     border-radius: 40px;
-    box-shadow: 0px 0px 40px 0px #062E390D;
+    box-shadow: 0px 0px 40px 0px #2646930D;
     margin-top: 40px;
     padding: 60px 40px 40px;
 }
@@ -1895,7 +1922,7 @@ header.main-header .header-sticky.active {
     background: var(--white-color);
     border: 1px solid var(--divider-color);
     border-radius: 40px;
-    box-shadow: 0px 0px 30px 0px #062E390D;
+    box-shadow: 0px 0px 30px 0px #2646930D;
     padding: 60px;
     margin: 80px 0;
     margin-right: -80px;
@@ -6032,4 +6059,21 @@ header.main-header .header-sticky.active {
     .contact-info-content h3 {
         font-size: 18px;
     }
+}
+
+/* Logo Sizing & Styling Optimizations */
+.footer-logo img {
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
 }

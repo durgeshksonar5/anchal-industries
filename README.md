@@ -11,7 +11,7 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 - **Responsive Navigation**: Fully optimized for all devices with a sticky header and mobile-friendly SlickNav menu.
 - **Dynamic Counters**: Real-time animation of business statistics (tonnes of steel fabricated, successful projects).
 - **Service Portfolio**: Detailed showcase of heavy welding, custom fabrication, agricultural implements, and designer gates.
-- **Request a Quote**: A functional lead generation form with inline validation.
+- **Get in touch**: A functional lead generation form with inline validation.
 - **Advanced Micro-interactions**: Custom magic cursor effects and smooth parallax scrolling.
 - **SEO Optimized**: Semantic HTML5 structure with optimized meta tags and heading hierarchy.
 
