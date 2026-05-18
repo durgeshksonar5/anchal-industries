@@ -34,8 +34,15 @@ anchal-industries/
 ├── about.html              # About us page
 ├── service.html            # Services listing page
 ├── contact.html            # Contact page with interactive map
-├── service/
-│   └── service-single.html # Dedicated service detail page
+├── service/                # Dedicated service detail pages
+│   ├── welding-fabrication.html
+│   ├── agricultural-equipment.html
+│   ├── designer-gates.html
+│   ├── rolling-shutters.html
+│   ├── steel-staircases.html
+│   ├── paper-cups.html
+│   ├── hardware-supply.html
+│   └── onsite-support.html
 ├── assets/                 # Custom project assets
 │   ├── css/                # Main custom styles
 │   ├── js/                 # Custom logic and animation scripts
