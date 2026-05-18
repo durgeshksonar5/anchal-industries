@@ -6108,3 +6108,33 @@ header.main-header .header-sticky.active {
 .footer-links ul li {
     text-align: center;
 }
+.footer-copyright-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-copyright-text p {
+    margin-bottom: 5px !important;
+}
+.footer-copyright-text p:last-child {
+    margin-bottom: 0 !important;
+}
+.developed-by {
+    font-size: 14px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+.developer-logo {
+    height: 24px;
+    width: auto;
+    margin-left: 8px;
+    vertical-align: middle;
+    display: inline-block;
+}
+@media (max-width: 991px) {
+    .footer-copyright-text {
+        align-items: center;
+        text-align: center;
+    }
+}
