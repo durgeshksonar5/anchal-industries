@@ -6077,3 +6077,21 @@ header.main-header .header-sticky.active {
     transform: scale(1.05);
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
 }
+
+/* ========================================================================= */
+/* Center Aligned Footer Custom Styles */
+/* ========================================================================= */
+.about-footer, .footer-links {
+    text-align: center;
+}
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+.footer-contact-item {
+    justify-content: center;
+    text-align: left;
+}
+.footer-links ul li {
+    text-align: center;
+}
