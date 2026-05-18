@@ -7,17 +7,19 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 
 ## ✨ Key Features
 - **Modern UI/UX**: Clean, professional design with a focus on durability, engineering precision, and corporate trust.
+- **Eight Specialized Service Detail Pages**: Fleshed-out, content-rich landing pages for each industrial division (Welding, Agriculture, Gates, Shutters, Staircases, Paper Cups, Hardware, Onsite Erection).
 - **GSAP Animations**: Fluid text and image reveal effects using GSAP (ScrollTrigger, SplitText).
 - **Responsive Navigation**: Fully optimized for all devices with a sticky header and mobile-friendly SlickNav menu.
 - **Dynamic Counters**: Real-time animation of business statistics (tonnes of steel fabricated, successful projects).
 - **Service Portfolio**: Detailed showcase of heavy welding, custom fabrication, agricultural implements, and designer gates.
-- **Get in touch**: A functional lead generation form with inline validation.
+- **Perfect Symmetrical Centered Footer**: Fully re-architected 3-column balanced footer grid (`col-lg-4`) with centered columns and a custom `footer-contact-list` wrapper that centers the block while maintaining clean left-aligned vertical lists for addresses, emails, and phone numbers.
+- **Developer Credit & Brand Integration**: Built a custom responsive developer attribution section linking to `assets/logo.png` with pixel-perfect responsive alignments.
 - **Advanced Micro-interactions**: Custom magic cursor effects and smooth parallax scrolling.
 - **SEO Optimized**: Semantic HTML5 structure with optimized meta tags and heading hierarchy.
 
 ## 🛠️ Technology Stack
 - **Core**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Bootstrap 5, Custom Vanilla CSS, Animate.css
+- **Styling**: Bootstrap 5, Custom Vanilla CSS (custom.css), Animate.css
 - **Animation**: [GSAP](https://greensock.com/gsap/) (ScrollTrigger, SplitText), WOW.js
 - **Plugins**:
   - **Swiper**: For premium sliders and testimonials.
