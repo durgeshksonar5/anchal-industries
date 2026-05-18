@@ -6088,9 +6088,22 @@ header.main-header .header-sticky.active {
     display: flex;
     justify-content: center;
 }
-.footer-contact-item {
-    justify-content: center;
+.footer-contact-list {
+    display: inline-block;
     text-align: left;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-contact-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.footer-contact-item:last-child {
+    margin-bottom: 0;
 }
 .footer-links ul li {
     text-align: center;
