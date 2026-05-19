@@ -7,7 +7,7 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 
 ## ✨ Key Features
 - **Modern UI/UX**: Clean, professional design with a focus on durability, engineering precision, and corporate trust.
-- **Eight Specialized Service Detail Pages**: Fleshed-out, content-rich landing pages for each industrial division (Welding, Agriculture, Gates, Shutters, Staircases, Paper Cups, Hardware, Onsite Erection).
+- **Seven Specialized Service Detail Pages**: Fleshed-out, content-rich landing pages for each industrial division (Welding, Agriculture, Gates, Shutters, Staircases, Hardware, Onsite Erection).
 - **GSAP Animations**: Fluid text and image reveal effects using GSAP (ScrollTrigger, SplitText).
 - **Responsive Navigation**: Fully optimized for all devices with a sticky header and mobile-friendly SlickNav menu.
 - **Dynamic Counters**: Real-time animation of business statistics (tonnes of steel fabricated, successful projects).
@@ -42,7 +42,6 @@ anchal-industries/
 │   ├── designer-gates.html
 │   ├── rolling-shutters.html
 │   ├── steel-staircases.html
-│   ├── paper-cups.html
 │   ├── hardware-supply.html
 │   └── onsite-support.html
 ├── assets/                 # Custom project assets
@@ -64,7 +63,7 @@ To run this project locally:
 3. For the best development experience, use a live server extension (like VS Code Live Server).
 
 ## 📞 Contact Information
-- **Phone**: +91 99225 13143 / +91 99224 09378
+- **Phone**: +91 91686 82435 / +91 99224 09378
 - **Email**: anil.ingle@anchalindustries.com / anchalindustries19@gmail.com
 - **Address**: Yashwant Nagar, Near Mohata School Ground, NH-6, Wadner Bholji, Taluka Nandura, District Buldhana, Maharashtra, India
 
