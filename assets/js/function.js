@@ -245,7 +245,7 @@
 
     /* Zoom Gallery screenshot */
     $('.gallery-items').magnificPopup({
-        delegate: 'a',
+        delegate: 'a:not(.btn-default-sm)',
         type: 'image',
         closeOnContentClick: false,
         closeBtnInside: false,

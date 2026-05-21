@@ -1,0 +1,675 @@
+<!-- Design & Developed by Durgesh Sonar -->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Explore our extensive products gallery at Anchal Industries, showcasing high-quality welding fabrication, agricultural implements, designer gates, rolling shutters, and custom steel structures.">
+    <meta name="keywords"
+        content="products gallery, steel fabrication, agricultural equipment, designer gates, rolling shutters, Anchal Industries">
+    <meta name="author" content="Anchal Industries">
+    <!-- Page Title -->
+    <title>Products Gallery - Anchal Industries</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/anchal-favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="vendor/slicknav/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="vendor/fontawesome/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="vendor/animate/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="assets/css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="assets/css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+        /* Category Filter Buttons Styling */
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .btn-filter {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 2px solid transparent;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .btn-filter:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-filter.active {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            box-shadow: 0px 4px 15px rgba(121, 186, 60, 0.3);
+        }
+
+        /* Gallery Item and Caption Styling */
+        .photo-gallery {
+            background: var(--white-color);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-gallery a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 0.8;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .photo-gallery:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            padding: 25px;
+            background: var(--white-color);
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            background: var(--primary-light);
+            padding: 6px 14px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-caption h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            line-height: 1.3em;
+        }
+
+        .gallery-caption p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.5em;
+            margin-bottom: 20px;
+            height: 63px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        /* Custom Mini Button for Card */
+        .btn-default-sm {
+            position: relative;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1em;
+            text-transform: capitalize;
+            color: var(--secondary-color);
+            background: var(--primary-color);
+            border: none;
+            padding: 12px 35px 12px 15px;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .btn-default-sm:hover {
+            background: var(--accent-color);
+            color: var(--white-color);
+        }
+
+        .btn-default-sm::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url('assets/images/arrow-white.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transform: translate(-15px, -50%);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-default-sm:hover::before {
+            transform: translate(-10px, -50%);
+        }
+
+        .btn-default-sm::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -15%;
+            right: 0;
+            width: 0;
+            height: 106%;
+            background: var(--accent-color);
+            transform: skew(30deg);
+            transition: all 0.3s ease-in-out;
+            z-index: -1;
+        }
+
+        .btn-default-sm:hover::after {
+            width: 120%;
+            transform: skew(0deg);
+            left: 0;
+        }
+
+        /* Category Filter Transition Animations */
+        .gallery-item {
+            transition: all 0.4s ease-in-out;
+        }
+
+        .gallery-item.hidden {
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="assets/anchal-favicon.png" alt="Anchal Industries"></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/anchal-logo.png" alt="Anchal Industries Logo">
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="service.html">Services</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="service.html">All Services</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/welding-fabrication.html">Welding & Fabrication</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/agricultural-equipment.html">Agricultural Equipment</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/designer-gates.html">Designer Gates & Iron Works</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/rolling-shutters.html">Rolling Shutter Solutions</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/steel-staircases.html">Steel Staircases & Railings</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/hardware-supply.html">Wholesale Hardware Supply</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="service/onsite-support.html">Onsite Installation & Support</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="contact.html" class="btn-default btn-highlighted">Get in touch</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Products gallery</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">products gallery</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Gallery Section Start -->
+    <div class="page-gallery">
+        <div class="container">
+            <!-- Filter Buttons Start -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="gallery-filters wow fadeInUp" data-wow-delay="0.2s">
+                        <button class="btn-filter active" data-filter="all">All Products</button>
+                        <button class="btn-filter" data-filter="welding-fabrication">Welding & Fabrication</button>
+                        <button class="btn-filter" data-filter="agricultural-equipment">Agricultural Equipment</button>
+                        <button class="btn-filter" data-filter="gates-shutters">Gates & Shutters</button>
+                        <button class="btn-filter" data-filter="residential-commercial">Residential & Commercial</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Filter Buttons End -->
+
+            <!-- Gallery Grid Start -->
+            <div class="row page-gallery-box gallery-items" id="gallery-grid">
+                <!-- Item 1: Designer Main Gate -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item gates-shutters residential-commercial">
+                    <div class="photo-gallery wow fadeInUp">
+                        <a href="assets/productimages/ChatGPT%20Image%20May%2020,%202026,%2002_29_16%20PM.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/ChatGPT%20Image%20May%2020,%202026,%2002_29_16%20PM.png" alt="Designer Main Gate">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Designer Gates</span>
+                            <h4>Designer Main Gate</h4>
+                            <p>Premium customized compound gate with intricate metalwork and durable finish.</p>
+                            <a href="contact.html?product=designer-gate" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: SS Staircase & Railings -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item welding-fabrication residential-commercial">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="assets/productimages/ChatGPT%20Image%20May%2020,%202026,%2002_31_07%20PM.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/ChatGPT%20Image%20May%2020,%202026,%2002_31_07%20PM.png" alt="Stainless Steel Staircase & Railings">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Steel Staircases</span>
+                            <h4>SS Staircase & Railings</h4>
+                            <p>High-grade stainless steel staircase railings with smooth satin finish and elegant design.</p>
+                            <a href="contact.html?product=ss-staircase" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Air Cooler Manufacturing -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item welding-fabrication">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="assets/productimages/air-cooler-manificturing.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/air-cooler-manificturing.png" alt="Air Cooler Manufacturing Unit">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Industrial Fabrication</span>
+                            <h4>Air Cooler Manufacturing</h4>
+                            <p>Heavy-duty industrial air cooler bodies manufactured using precision sheet metal fabrication.</p>
+                            <a href="contact.html?product=air-cooler-manufacturing" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Aluminium Sliding Window -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item residential-commercial">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="assets/productimages/aluminium-sliding-window.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/aluminium-sliding-window.png" alt="Aluminium Sliding Window">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Residential Works</span>
+                            <h4>Aluminium Sliding Window</h4>
+                            <p>Modern powder-coated aluminium sliding window with high-end tracks and double glass glazing.</p>
+                            <a href="contact.html?product=sliding-window" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Heavy-Duty Nangar (Plow) -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item agricultural-equipment">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="assets/productimages/nangar.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/nangar.png" alt="Heavy-Duty Nangar (Plow)">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Agricultural Equipment</span>
+                            <h4>Heavy-Duty Nangar (Plow)</h4>
+                            <p>Robust iron plow (Nangar) engineered for high-durability and deep soil penetration in rough farming fields.</p>
+                            <a href="contact.html?product=nangar-plow" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Perni Yantra (Seed Drill) -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item agricultural-equipment">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="assets/productimages/perni-yantra.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/perni-yantra.png" alt="Perni Yantra (Seed Drill)">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Agricultural Equipment</span>
+                            <h4>Perni Yantra (Seed Drill)</h4>
+                            <p>Advanced farming seed drill implement designed for precision seed distribution and spacing.</p>
+                            <a href="contact.html?product=perni-yantra" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: Premium Rolling Shutter -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item gates-shutters">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="assets/productimages/rolling-shutter.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/rolling-shutter.png" alt="Premium Rolling Shutter">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Rolling Shutters</span>
+                            <h4>Premium Rolling Shutter</h4>
+                            <p>High-security heavy-gauge steel rolling shutter for warehouses, garages, and commercial storefronts.</p>
+                            <a href="contact.html?product=rolling-shutter" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8: Tin Shade Roof Structure -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item welding-fabrication residential-commercial">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.7s">
+                        <a href="assets/productimages/tin-shade.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/tin-shade.png" alt="Tin Shade Roof Structure">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Steel Structures</span>
+                            <h4>Tin Shade Roof Structure</h4>
+                            <p>Industrial grade structural tin shade roofing engineered to withstand extreme wind load and weather.</p>
+                            <a href="contact.html?product=tin-shade" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9: Custom Welding & Fabrication -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item welding-fabrication">
+                    <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="assets/productimages/welding-fabrication.png" data-cursor-text="Zoom">
+                            <figure class="image-anime reveal">
+                                <img src="assets/productimages/welding-fabrication.png" alt="Custom Welding & Fabrication">
+                            </figure>
+                        </a>
+                        <div class="gallery-caption">
+                            <span class="category-tag">Welding Services</span>
+                            <h4>Custom Welding & Fabrication</h4>
+                            <p>Precision metal assembly, ARC/MIG/TIG welding works, and custom heavy fabrication solutions.</p>
+                            <a href="contact.html?product=welding-fabrication" class="btn-default-sm">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gallery Grid End -->
+        </div>
+    </div>
+    <!-- Page Gallery Section End -->
+
+    <!-- Footer Main Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <!-- About Footer start -->
+                    <div class="about-footer">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="assets/anchal-logo.png" alt="Anchal Industries Logo">
+                        </div>
+                        <!-- Footer Logo End -->
+
+                        <!-- Footer Contact Box Start -->
+                        <div class="about-footer-content">
+                            <p>Anchal Industries is a manufacturing, fabrication, and industrial solutions company
+                                specializing in high-quality engineering work, industrial tools, and custom steel
+                                structures.</p>
+                        </div>
+                        <!-- Footer Contact Box End -->
+                    </div>
+                    <!-- About Footer End -->
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links">
+                        <h3>quick link</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="service.html">our services</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links">
+                        <h3>contact us</h3>
+                        <div class="footer-contact-list">
+                            <!-- Footer Contact Item Start -->
+                            <div class="footer-contact-item">
+                                <div class="icon-box">
+                                    <img src="assets/images/icon-location.svg" alt="Anchal Industries Address">
+                                </div>
+                                <div class="footer-contact-content">
+                                    <p>Yashwant Nagar, Near Mohata School Ground, NH-6, Wadner Bholji, Taluka Nandura,
+                                        District Buldhana, Maharashtra, India</p>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Item End -->
+
+                            <!-- Footer Contact Item Start -->
+                            <div class="footer-contact-item">
+                                <div class="icon-box">
+                                    <img src="assets/images/icon-mail.svg" alt="Anchal Industries Email">
+                                </div>
+                                <div class="footer-contact-content">
+                                    <p><a
+                                            href="mailto:anil.ingle@anchalindustries.com">anil.ingle@anchalindustries.com</a>
+                                    </p>
+                                    <p><a href="mailto:anchalindustries19@gmail.com">anchalindustries19@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Item End -->
+
+                            <!-- Footer Contact Item Start -->
+                            <div class="footer-contact-item">
+                                <div class="icon-box">
+                                    <img src="assets/images/icon-phone.svg" alt="Anchal Industries Phone">
+                                </div>
+                                <div class="footer-contact-content">
+                                    <p><a href="tel:+9191686 82435">+91 91686 82435</a></p>
+                                    <p><a href="tel:+919922409378">+91 99224 09378</a></p>
+                                    <p><a href="tel:+919146190520">+91 91461 90520</a></p>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Item End -->
+                        </div>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Section Start -->
+                    <div class="footer-copyright">
+                        <!-- Footer Copyright Text Start -->
+                        <div class="footer-copyright-text">
+                            <p>Copyright © 2025 Anchal Industries. All Rights Reserved.</p>
+                            <p class="developed-by">Design & Developed by <img src="assets/logo.png"
+                                    alt="Developer Logo" class="developer-logo"></p>
+                        </div>
+                        <!-- Footer Copyright Text End -->
+
+                        <!-- Footer Social Link Start -->
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Social Link End -->
+                    </div>
+                    <!-- Footer Copyright Section End -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Main End -->
+
+    <!-- Jquery Library File -->
+    <script src="vendor/jquery/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="vendor/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="vendor/slicknav/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="vendor/jquery/jquery.waypoints.min.js"></script>
+    <script src="vendor/jquery/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="assets/js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="vendor/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="vendor/gsap/gsap.min.js"></script>
+    <script src="assets/js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="vendor/gsap/SplitText.js"></script>
+    <script src="vendor/gsap/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="vendor/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="vendor/wow/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="assets/js/function.js"></script>
+
+    <!-- Custom jQuery Filter Script -->
+    <script>
+        $(document).ready(function () {
+            $('.btn-filter').on('click', function () {
+                // Remove active class from all buttons and add to current
+                $('.btn-filter').removeClass('active');
+                $(this).addClass('active');
+
+                var filterValue = $(this).attr('data-filter');
+
+                if (filterValue == 'all') {
+                    $('.gallery-item').removeClass('hidden');
+                } else {
+                    $('.gallery-item').addClass('hidden');
+                    $('.gallery-item.' + filterValue).removeClass('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
