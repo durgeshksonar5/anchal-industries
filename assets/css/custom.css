@@ -6138,3 +6138,104 @@ header.main-header .header-sticky.active {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   Defense Engineering Section
+   ========================================================================== */
+.defense-engineering {
+    padding: 100px 0;
+    position: relative;
+    background-color: var(--white-color);
+}
+
+.defense-content .section-title {
+    margin-bottom: 0;
+}
+
+.defense-image figure {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.defense-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.defense-list-box {
+    background: #f9fbfb;
+    border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+}
+
+.defense-subheading {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.defense-subheading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.defense-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.defense-list li {
+    color: var(--text-color);
+    line-height: 1.6em;
+    padding-left: 32px;
+    background-image: url('../images/icon-sub-heading.svg');
+    background-repeat: no-repeat;
+    background-position: left top 2px;
+    background-size: 20px auto;
+    margin-bottom: 15px;
+}
+
+.defense-list li:last-child {
+    margin-bottom: 0;
+}
+
+.defense-commitment {
+    background: var(--primary-color);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.defense-commitment p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+    margin: 0;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+@media (max-width: 991px) {
+    .defense-engineering {
+        padding: 80px 0;
+    }
+    .defense-image {
+        margin-top: 40px;
+    }
+    .defense-list-box {
+        margin-bottom: 30px;
+    }
+}
