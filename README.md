@@ -65,7 +65,9 @@ To run this project locally:
 ## 📞 Contact Information
 - **Phone**: +91 91686 82435 / +91 99224 09378
 - **Email**: anil.ingle@anchalindustries.com / anchalindustries19@gmail.com
-- **Address**: Yashwant Nagar, Near Mohata School Ground, NH-6, Wadner Bholji, Taluka Nandura, District Buldhana, Maharashtra, India
+- **Addresses**:
+  - **Corporate Office & Pune Unit**: 103, Palladium Grand, K Building, P1, First Floor, Pune, Maharashtra
+  - **Factory & Branch Office**: Yashwant Nagar, Near Bus stand, At/PO: Wadner Bholji, Ta- Nandra, Di-Buldana, Maharashtra - 443101
 
 ---
 *Created with ❤️ for Anchal Industries.*
