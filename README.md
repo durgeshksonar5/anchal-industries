@@ -3,9 +3,11 @@
 Welcome to the **Anchal Industries** official website project. This is a high-end, responsive, and professionally designed web application for a manufacturing, fabrication, and industrial solutions company, built using modern web technologies to ensure a seamless user experience.
 
 ## 🚀 Project Overview
+
 **Anchal Industries** specializes in high-quality engineering, structural steel fabrication, heavy machinery manufacturing, and wholesale industrial/agricultural tools supply. Based in Wadner Bholji, Nandura, Maharashtra, the platform showcases industrial services, designer steel works, and connects clients directly via custom contact channels.
 
 ## ✨ Key Features
+
 - **Modern UI/UX**: Clean, professional design with a focus on durability, engineering precision, and corporate trust.
 - **Seven Specialized Service Detail Pages**: Fleshed-out, content-rich landing pages for each industrial division (Welding, Agriculture, Gates, Shutters, Staircases, Hardware, Onsite Erection).
 - **GSAP Animations**: Fluid text and image reveal effects using GSAP (ScrollTrigger, SplitText).
@@ -18,6 +20,7 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 - **SEO Optimized**: Semantic HTML5 structure with optimized meta tags and heading hierarchy.
 
 ## 🛠️ Technology Stack
+
 - **Core**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: Bootstrap 5, Custom Vanilla CSS (custom.css), Animate.css
 - **Animation**: [GSAP](https://greensock.com/gsap/) (ScrollTrigger, SplitText), WOW.js
@@ -30,6 +33,7 @@ Welcome to the **Anchal Industries** official website project. This is a high-en
 - **Icons & Fonts**: Font Awesome 6, Google Fonts (DM Sans)
 
 ## 📁 Project Structure
+
 ```text
 anchal-industries/
 ├── index.html              # Main landing page
@@ -57,17 +61,21 @@ anchal-industries/
 ```
 
 ## ⚙️ Getting Started
+
 To run this project locally:
+
 1. Clone the repository: `git clone https://github.com/durgeshksonar5/anchal-industries.git`
 2. Open `index.html` in your preferred web browser.
 3. For the best development experience, use a live server extension (like VS Code Live Server).
 
 ## 📞 Contact Information
+
 - **Phone**: +91 91686 82435 / +91 99224 09378
 - **Email**: anil.ingle@anchalindustries.com / anchalindustries19@gmail.com
 - **Addresses**:
-  - **Corporate Office & Pune Unit**: 103, Palladium Grand, K Building, P1, First Floor, Pune, Maharashtra
+  - **Corporate Office & Pune Unit**: 103, Palladium Grand , K Building , P1, First Flr, above to Lens cart showroom ,Main Road, Madhav Nagar, Dhanori , Pune- 411015, Pune, Maharashtra
   - **Factory & Branch Office**: Yashwant Nagar, Near Bus stand, At/PO: Wadner Bholji, Ta- Nandra, Di-Buldana, Maharashtra - 443101
 
 ---
-*Created with ❤️ for Anchal Industries.*
+
+_Created with ❤️ for Anchal Industries._
