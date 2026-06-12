@@ -2526,14 +2526,6 @@ header.main-header .header-sticky.active {
     margin-bottom: 0;
 }
 
-.developer-logo {
-    height: 35px;
-    width: auto;
-    vertical-align: middle;
-    margin-left: 6px;
-    display: inline-block;
-}
-
 .footer-social-links ul {
     margin: 0;
     padding: 0;
@@ -6232,7 +6224,7 @@ header.main-header .header-sticky.active {
     align-items: center;
 }
 .developer-logo {
-    height: 24px;
+    height: 35px;
     width: auto;
     margin-left: 8px;
     vertical-align: middle;
