@@ -414,4 +414,27 @@
         setTimeout(matchTeamHeights, 1500);
     });
 
+    /* Floating Action Scroll-to-Top Button Show/Hide & Action */
+    $(document).ready(function() {
+        var scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', function() {
+                var scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollPos > 200) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+
 })(jQuery);
