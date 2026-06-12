@@ -2415,6 +2415,11 @@ header.main-header .header-sticky.active {
     margin-bottom: 0;
 }
 
+.about-footer .footer-contact-item {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
 .footer-links h3 {
     font-size: 20px;
     color: var(--white-color);
