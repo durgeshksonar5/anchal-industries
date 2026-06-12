@@ -7,7 +7,7 @@
     /* Preloader Effect */
     setTimeout(function() {
         $(".preloader").fadeOut(600);
-    }, 2000);
+    }, 1000);
 
     /* Sticky Header */
     if ($('.active-sticky-header').length) {
