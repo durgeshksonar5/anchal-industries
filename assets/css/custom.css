@@ -6342,7 +6342,7 @@ header.main-header .header-sticky.active {
 .floating-actions {
     position: fixed;
     right: 25px;
-    bottom: 25px;
+    bottom: 50px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -6407,7 +6407,7 @@ header.main-header .header-sticky.active {
 @media (max-width: 767px) {
     .floating-actions {
         right: 15px;
-        bottom: 15px;
+        bottom: 35px;
         gap: 10px;
     }
     .floating-btn {
