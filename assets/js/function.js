@@ -5,9 +5,9 @@
     var $body = $('body');
 
     /* Preloader Effect */
-    $window.on('load', function() {
+    setTimeout(function() {
         $(".preloader").fadeOut(600);
-    });
+    }, 2000);
 
     /* Sticky Header */
     if ($('.active-sticky-header').length) {
