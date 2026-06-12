@@ -384,4 +384,34 @@
     }
     /*Service Entry Step Item Active End  */
 
+    /* Match Team Heights JS */
+    function matchTeamHeights() {
+        if ($window.width() >= 992) {
+            var $mdImage = $('.main-team-column .team-image img');
+            if ($mdImage.length) {
+                var mdImgHeight = $mdImage.height();
+                if (mdImgHeight > 0) {
+                    $('.right-team-column').css('height', mdImgHeight + 'px');
+                }
+            }
+        } else {
+            $('.right-team-column').css('height', 'auto');
+        }
+    }
+
+    $window.on('load resize', function() {
+        matchTeamHeights();
+    });
+
+    $('.main-team-column .team-image img').on('load', function() {
+        matchTeamHeights();
+    });
+
+    $(document).ready(function() {
+        matchTeamHeights();
+        setTimeout(matchTeamHeights, 100);
+        setTimeout(matchTeamHeights, 500);
+        setTimeout(matchTeamHeights, 1500);
+    });
+
 })(jQuery);

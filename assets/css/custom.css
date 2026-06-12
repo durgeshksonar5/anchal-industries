@@ -2236,6 +2236,99 @@ header.main-header .header-sticky.active {
     margin: 0;
 }
 
+@media (min-width: 992px) {
+    .main-team-column {
+        flex: 0 0 37.333333% !important;
+        width: 37.333333% !important;
+        max-width: 37.333333% !important;
+    }
+    
+    .right-team-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 0 21% !important;
+        width: 21% !important;
+        max-width: 21% !important;
+        margin-left: 1% !important;
+    }
+    
+    .team-item-compact {
+        position: relative;
+        height: calc((100% - 20px) / 2);
+        margin-bottom: 0 !important;
+        overflow: hidden;
+        border-radius: 30px;
+    }
+    
+    .team-item-compact .team-image {
+        height: 100% !important;
+        margin-bottom: 0 !important;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .team-item-compact .team-image a,
+    .team-item-compact .team-image figure {
+        height: 100%;
+        margin: 0;
+        display: block;
+    }
+    
+    .team-item-compact .team-image img {
+        height: 100% !important;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: auto !important;
+    }
+    
+    .team-item-compact .team-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+        padding: 30px 20px 20px;
+        text-align: center;
+        z-index: 2;
+        border-radius: 0 0 30px 30px;
+    }
+    
+    .team-item-compact .team-content h3 {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    .team-item-compact .team-content h3 a {
+        color: var(--white-color) !important;
+    }
+    
+    .team-item-compact .team-content p {
+        font-size: 13px;
+        color: var(--accent-color) !important;
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 991px) {
+    .team-item-compact {
+        margin-bottom: 30px;
+    }
+    
+    .team-item-compact .team-image {
+        margin-bottom: 12px;
+        border-radius: 30px;
+    }
+    
+    .team-item-compact .team-content h3 {
+        font-size: 18px;
+    }
+    
+    .team-item-compact .team-content p {
+        font-size: 14px;
+    }
+}
+
 /************************************/
 
 /***   		15. Our Blog css	  ***/
