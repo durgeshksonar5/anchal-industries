@@ -2517,13 +2517,21 @@ header.main-header .header-sticky.active {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--dark-divider-color);
-    padding: 20px 0 40px;
+    padding: 20px 0 10px;
     margin-top: 60px;
 }
 
 .footer-copyright-text p {
     color: var(--white-color);
     margin-bottom: 0;
+}
+
+.developer-logo {
+    height: 35px;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 6px;
+    display: inline-block;
 }
 
 .footer-social-links ul {
@@ -6341,8 +6349,8 @@ header.main-header .header-sticky.active {
 /* Floating Quick Actions (WhatsApp & Scroll to Top) */
 .floating-actions {
     position: fixed;
-    right: 25px;
-    bottom: 50px;
+    right: 38px;
+    bottom: 100px;
     display: flex;
     flex-direction: column;
     gap: 12px;
