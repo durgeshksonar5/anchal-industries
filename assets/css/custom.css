@@ -6381,7 +6381,7 @@ header.main-header .header-sticky.active {
 
 /* Scroll to Top Floating Button */
 .btn-scroll-top {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--white-color);
     font-size: 20px;
     opacity: 0;
@@ -6397,10 +6397,10 @@ header.main-header .header-sticky.active {
 }
 
 .btn-scroll-top:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(38, 70, 147, 0.3);
+    box-shadow: 0 6px 20px rgba(121, 186, 60, 0.3);
 }
 
 /* Responsive adjustment for small screens */
