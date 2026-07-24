@@ -277,33 +277,67 @@
     });
 
     function submitForm() {
+        var $btn = $contactform.find('button[type="submit"]');
+        var originalBtnText = $btn.html();
+        
+        // Show loading state
+        $btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Sending...');
+        $("#msgSubmit").addClass('hidden').removeClass('text-success text-danger h4 h3').text('');
+
+        // Prepare data as JSON
+        var formData = {};
+        $contactform.serializeArray().forEach(function(item) {
+            formData[item.name] = item.value;
+        });
+
         /* Ajax call to submit form */
         $.ajax({
             type: "POST",
-            url: "form-process.php",
-            data: $contactform.serialize(),
-            success: function(text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    submitMSG(false, text);
+            url: "https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/2d5cd4d1-f34f-49dc-b84f-a39e12c1db64",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            success: function(response) {
+                $btn.prop('disabled', false).html(originalBtnText);
+                formSuccess();
+            },
+            error: function(xhr, status, error) {
+                $btn.prop('disabled', false).html(originalBtnText);
+                var errMsg = "Something went wrong. Please try again.";
+                if (xhr.responseJSON) {
+                    if (xhr.responseJSON.message) {
+                        errMsg = xhr.responseJSON.message;
+                    } else if (xhr.responseJSON.error) {
+                        errMsg = xhr.responseJSON.error;
+                    } else if (xhr.responseJSON.errors && Array.isArray(xhr.responseJSON.errors)) {
+                        errMsg = xhr.responseJSON.errors.join(", ");
+                    }
+                } else if (xhr.responseText) {
+                    try {
+                        var parsed = JSON.parse(xhr.responseText);
+                        if (parsed.message) {
+                            errMsg = parsed.message;
+                        } else if (parsed.error) {
+                            errMsg = parsed.error;
+                        }
+                    } catch(e) {
+                        if (xhr.responseText.length < 100) {
+                            errMsg = xhr.responseText;
+                        }
+                    }
                 }
+                submitMSG(false, errMsg);
             }
         });
     }
 
     function formSuccess() {
         $contactform[0].reset();
-        submitMSG(true, "Message Sent Successfully!")
+        submitMSG(true, "Thank you! Your message has been sent successfully.");
     }
 
     function submitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h4 text-success";
-        } else {
-            var msgClasses = "h4 text-danger";
-        }
-        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+        var msgClasses = valid ? "h4 text-success" : "h4 text-danger";
+        $("#msgSubmit").removeClass('hidden').removeClass('text-success text-danger h4 h3').addClass(msgClasses).text(msg).hide().fadeIn();
     }
     /* Contact form validation end */
 
@@ -319,33 +353,67 @@
     });
 
     function submitappointmentForm() {
+        var $btn = $requestquoteForm.find('button[type="submit"]');
+        var originalBtnText = $btn.html();
+
+        // Show loading state
+        $btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Sending...');
+        $("#msgSubmit").addClass('hidden').removeClass('text-success text-danger h4 h3').text('');
+
+        // Prepare data as JSON
+        var formData = {};
+        $requestquoteForm.serializeArray().forEach(function(item) {
+            formData[item.name] = item.value;
+        });
+
         /* Ajax call to submit form */
         $.ajax({
             type: "POST",
-            url: "form-appointment.php",
-            data: $requestquoteForm.serialize(),
-            success: function(text) {
-                if (text === "success") {
-                    appointmentformSuccess();
-                } else {
-                    appointmentsubmitMSG(false, text);
+            url: "https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/2d5cd4d1-f34f-49dc-b84f-a39e12c1db64",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            success: function(response) {
+                $btn.prop('disabled', false).html(originalBtnText);
+                appointmentformSuccess();
+            },
+            error: function(xhr, status, error) {
+                $btn.prop('disabled', false).html(originalBtnText);
+                var errMsg = "Something went wrong. Please try again.";
+                if (xhr.responseJSON) {
+                    if (xhr.responseJSON.message) {
+                        errMsg = xhr.responseJSON.message;
+                    } else if (xhr.responseJSON.error) {
+                        errMsg = xhr.responseJSON.error;
+                    } else if (xhr.responseJSON.errors && Array.isArray(xhr.responseJSON.errors)) {
+                        errMsg = xhr.responseJSON.errors.join(", ");
+                    }
+                } else if (xhr.responseText) {
+                    try {
+                        var parsed = JSON.parse(xhr.responseText);
+                        if (parsed.message) {
+                            errMsg = parsed.message;
+                        } else if (parsed.error) {
+                            errMsg = parsed.error;
+                        }
+                    } catch(e) {
+                        if (xhr.responseText.length < 100) {
+                            errMsg = xhr.responseText;
+                        }
+                    }
                 }
+                appointmentsubmitMSG(false, errMsg);
             }
         });
     }
 
     function appointmentformSuccess() {
-        $appointmentForm[0].reset();
-        appointmentsubmitMSG(true, "Message Sent Successfully!")
+        $requestquoteForm[0].reset();
+        appointmentsubmitMSG(true, "Thank you! Your quote request has been sent successfully.");
     }
 
     function appointmentsubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-success";
-        } else {
-            var msgClasses = "h3 text-danger";
-        }
-        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+        var msgClasses = valid ? "h3 text-success" : "h3 text-danger";
+        $("#msgSubmit").removeClass('hidden').removeClass('text-success text-danger h4 h3').addClass(msgClasses).text(msg).hide().fadeIn();
     }
     /* Appointment form validation end */
 
