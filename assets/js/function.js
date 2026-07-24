@@ -505,4 +505,107 @@
         }
     });
 
+    /* WhatsApp Popup Form Functionality */
+    $(document).ready(function() {
+        var waModalHtml = 
+            '<div class="whatsapp-modal-overlay" id="whatsappModal">' +
+            '    <div class="whatsapp-modal-card">' +
+            '        <button class="whatsapp-modal-close" id="whatsappModalClose">&times;</button>' +
+            '        <div class="whatsapp-modal-header">' +
+            '            <div class="whatsapp-modal-icon">' +
+            '                <i class="fa-brands fa-whatsapp"></i>' +
+            '            </div>' +
+            '            <h3>Connect on WhatsApp</h3>' +
+            '            <p>Please enter your details to start the conversation.</p>' +
+            '        </div>' +
+            '        <form id="whatsappPopupForm">' +
+            '            <div class="whatsapp-form-group">' +
+            '                <label for="wa_name">Your Name</label>' +
+            '                <div class="whatsapp-input-wrapper">' +
+            '                    <input type="text" id="wa_name" name="name" placeholder="John Doe" required>' +
+            '                    <i class="fa-solid fa-user"></i>' +
+            '                </div>' +
+            '            </div>' +
+            '            <div class="whatsapp-form-group">' +
+            '                <label for="wa_phone">Contact Number</label>' +
+            '                <div class="whatsapp-input-wrapper">' +
+            '                    <input type="tel" id="wa_phone" name="phone" placeholder="91XXXXXXXX" required>' +
+            '                    <i class="fa-solid fa-phone"></i>' +
+            '                </div>' +
+            '            </div>' +
+            '            <button type="submit" class="whatsapp-submit-btn" id="waSubmitBtn">' +
+            '                <span>Submit & Chat</span> <i class="fa-solid fa-paper-plane"></i>' +
+            '            </button>' +
+            '            <div id="waMsgSubmit" class="whatsapp-msg hidden"></div>' +
+            '        </form>' +
+            '    </div>' +
+            '</div>';
+        
+        $('body').append(waModalHtml);
+
+        var whatsappUrl = "https://wa.me/919168682435"; // Fallback URL
+        
+        $(document).on('click', '.btn-whatsapp', function(e) {
+            e.preventDefault();
+            var href = $(this).attr('href');
+            if (href && href !== '#' && href !== '') {
+                whatsappUrl = href;
+            }
+            $('#whatsappModal').addClass('active');
+            $('body').css('overflow', 'hidden'); // Prevent background scrolling
+        });
+
+        $(document).on('click', '#whatsappModalClose, .whatsapp-modal-overlay', function(e) {
+            if (e.target === this || $(this).attr('id') === 'whatsappModalClose') {
+                $('#whatsappModal').removeClass('active');
+                $('body').css('overflow', ''); // Restore background scrolling
+            }
+        });
+
+        $(document).on('submit', '#whatsappPopupForm', function(e) {
+            e.preventDefault();
+            var $form = $(this);
+            var $btn = $form.find('#waSubmitBtn');
+            var originalBtnText = $btn.html();
+            
+            $btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Submitting...');
+            $('#waMsgSubmit').addClass('hidden').removeClass('text-success text-danger').text('');
+
+            var formData = {};
+            $form.serializeArray().forEach(function(item) {
+                formData[item.name] = item.value;
+            });
+            formData['type'] = 'whatsapp';
+            formData['source'] = 'WhatsApp Floating Button';
+
+            $.ajax({
+                type: "POST",
+                url: "https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/2d5cd4d1-f34f-49dc-b84f-a39e12c1db64",
+                contentType: "application/json",
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    $btn.prop('disabled', false).html(originalBtnText);
+                    $form[0].reset();
+                    $('#whatsappModal').removeClass('active');
+                    $('body').css('overflow', '');
+                    
+                    // Open WhatsApp link
+                    window.open(whatsappUrl, '_blank');
+                },
+                error: function(xhr, status, error) {
+                    $btn.prop('disabled', false).html(originalBtnText);
+                    var errMsg = "Something went wrong. Please try again.";
+                    if (xhr.responseJSON) {
+                        if (xhr.responseJSON.message) {
+                            errMsg = xhr.responseJSON.message;
+                        } else if (xhr.responseJSON.error) {
+                            errMsg = xhr.responseJSON.error;
+                        }
+                    }
+                    $('#waMsgSubmit').removeClass('hidden').addClass('text-danger').text(errMsg);
+                }
+            });
+        });
+    });
+
 })(jQuery);
